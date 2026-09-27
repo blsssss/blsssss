@@ -63,6 +63,7 @@ combat-log enemies to dungeon positions with the Hungarian algorithm, exports ro
 <a href="https://github.com/blsssss/jimichi"><b>jimichi</b></a><br>
 Messenger with metadata protection: three relays, nested encryption, fixed 512-byte cells,
 cover traffic, keys in locked memory outside the Go heap. Includes a traffic-correlation attack to measure it.<br>
+<a href="https://jimichi.org">jimichi.org</a> · <a href="https://github.com/jimichi-org">jimichi-org</a><br>
 <sub>Go · X25519 · XChaCha20-Poly1305 · Kubernetes</sub>
 </td>
 </tr>
@@ -112,6 +113,17 @@ Windows overlay and iPhone app.<br>
 UNIX log analysis with local and remote LLMs.<br>
 <sub>Go · Vite · TypeScript</sub>
 </td>
+</tr>
+<tr>
+<td valign="top">
+<img src="assets/ppshkin.png" width="64" align="left">
+<a href="https://github.com/blsssss/PPshkin"><b>PPshkin</b></a> <sub><code>hackathon</code></sub><br>
+Bot and mini app in the MAX messenger for small cafes and bakeries: food diary from photos,
+a dish nearby that fits the calories left for the day, end-of-day items at a discount instead of
+write-offs, bookings by code and QR.<br>
+<sub>TypeScript · Fastify · PostgreSQL · React · MAX UI</sub>
+</td>
+<td valign="top"></td>
 </tr>
 </table>
 
