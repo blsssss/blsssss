@@ -60,7 +60,7 @@ combat-log enemies to dungeon positions with the Hungarian algorithm, exports ro
 </td>
 <td width="50%" valign="top">
 <img src="assets/jimichi.png" width="64" align="left">
-<a href="https://github.com/blsssss/jimichi"><b>jimichi</b></a><br>
+<a href="https://github.com/jimichi-org/jimichi"><b>jimichi</b></a><br>
 Messenger with metadata protection: three relays, nested encryption, fixed 512-byte cells,
 cover traffic, keys in locked memory outside the Go heap. Includes a traffic-correlation attack to measure it.<br>
 <a href="https://jimichi.org">jimichi.org</a> · <a href="https://github.com/jimichi-org">jimichi-org</a><br>
