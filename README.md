@@ -123,7 +123,14 @@ a dish nearby that fits the calories left for the day, end-of-day items at a dis
 write-offs, bookings by code and QR.<br>
 <sub>TypeScript · Fastify · PostgreSQL · React · MAX UI</sub>
 </td>
-<td valign="top"></td>
+<td valign="top">
+<img src="assets/mamori.png" width="64" align="left">
+<a href="https://github.com/blsssss/mamori"><b>mamori</b></a> <sub><code>coursework</code></sub><br>
+Checks that the antivirus and the firewall on a Windows PC react to a test, not only that they
+are installed: EICAR and AMSI samples, a temporary firewall rule through UAC, a verdict backed by
+the findings. Visual novel interface with Reimu Hakurei.<br>
+<sub>Go · Wails · Svelte · TypeScript · WMI · COM</sub>
+</td>
 </tr>
 </table>
 
