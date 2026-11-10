@@ -7,14 +7,27 @@ DevOps engineer · Information security at MTUCI, Moscow<br>
 
 #### DevOps · Sber, Quantum Technologies Center · since Sep 2026
 
-- Network monitoring for the research lab: collectors on a Raspberry Pi behind a one-way VPN,
-  PostgreSQL, five alert rules in production Grafana. Fixed the alert confirmation logic:
-  on a replayed day of real data, 39 false alerts before, 0 after.
-- Archive of the lab's messenger for the internal LLM: 42k messages, 3.9k threads, 7.4k attachments,
-  PostgreSQL full-text and trigram search, an MCP server with 8 tools behind traefik.
-  The product team started using it the day it shipped.
-- Moved traefik out of the Grafana stack into its own on the shared host with about a minute
-  of downtime, then migrated a live service onto it with CI deploys.
+Proposed and led the research lab's move from standalone Docker Compose deployments to a shared
+Kubernetes platform in Cloud.ru. Designed and deployed the platform, migrated internal services,
+and remain its sole maintainer.
+
+- Built GitOps delivery with Argo CD and GitLab CI, automated image updates, centralized secret
+  management with External Secrets, and GitLab SSO. Split 14 research applications into separate
+  repositories with independent CI pipelines. Deployed YTsaurus and connected it to the internal
+  LLM through MCP.
+- Migrated Grafana from Docker Compose to Kubernetes and from SQLite to managed PostgreSQL,
+  preserving users, dashboards, alert rules, OAuth and encrypted data source settings. Wrote a
+  migration tool, reconciled populated tables after commit, and verified data source access.
+- Built backup and recovery workflows with Velero and Kopia, freeze/thaw hooks for consistent
+  YTsaurus backups, and cloud S3 storage. Verified recovery after deleting the YTsaurus namespace
+  and disks: the service restarted automatically and a 100,000-row table matched its original
+  checksum. Separately restored an application from cloud S3 and verified its data with SHA-256.
+  Resolved Kopia's incompatibility with the provider's S3 addressing requirements using VersityGW.
+- Deployed Prometheus, Alertmanager, Grafana and Blackbox Exporter for nodes, workloads,
+  YTsaurus, backup jobs, HTTPS availability and certificate expiry. Verified failure and
+  recovery notifications end to end.
+- Updated application images and dependencies following a container security audit. Checked
+  compatibility, scanned the exact images deployed by CI, and verified service health after rollout.
 
 #### DevOps · fintech platform, remote · May – Sep 2026
 
@@ -34,10 +47,11 @@ Kubernetes, GitOps on GitLab CI, Cloudflare and Imperva in front, 350–400 RPS 
   that reported `Ready` on a domain with 35 million requests, 25 days before TLS would fail.
 
 <table>
-<tr><td><b>Kubernetes</b></td><td>ingress-nginx · cert-manager · Kyverno · GitOps · frp reverse tunnels · PROXY protocol</td></tr>
-<tr><td><b>Edge</b></td><td>Cloudflare WAF, Rate Limiting, Workers, R2, Turnstile · Imperva · CrowdSec · nginx</td></tr>
-<tr><td><b>Delivery</b></td><td>GitLab CI · Docker Compose · traefik · wrangler · S3-compatible storage</td></tr>
-<tr><td><b>Observability</b></td><td>Grafana alerting · Prometheus metrics · OpenTelemetry · PostgreSQL</td></tr>
+<tr><td><b>Kubernetes</b></td><td>Cloud.ru · Argo CD · External Secrets · cert-manager · Kyverno · ingress-nginx · YTsaurus</td></tr>
+<tr><td><b>Edge</b></td><td>Cloudflare WAF, Rate Limiting, Workers, R2, Turnstile · Imperva · CrowdSec · nginx · frp · PROXY protocol</td></tr>
+<tr><td><b>Delivery</b></td><td>GitLab CI · GitOps · automated image updates · Docker Compose · Traefik · wrangler</td></tr>
+<tr><td><b>Observability</b></td><td>Prometheus · Alertmanager · Grafana · Blackbox Exporter · OpenTelemetry</td></tr>
+<tr><td><b>Data &amp; recovery</b></td><td>PostgreSQL · SQLite · Velero · Kopia · S3 · VersityGW</td></tr>
 <tr><td><b>Cryptography</b></td><td>AEAD · X25519 · Ed25519 · XChaCha20-Poly1305 · GOST · onion routing</td></tr>
 <tr><td><b>Code</b></td><td>Go · Python · C++ · TypeScript · Bash</td></tr>
 </table>
