@@ -131,7 +131,10 @@ UNIX log analysis with local and remote LLMs.<br>
 <tr>
 <td valign="top">
 <img src="assets/ppshkin.png" width="64" align="left">
-<a href="https://github.com/blsssss/PPshkin"><b>PPshkin</b></a> <sub><code>hackathon</code></sub><br>
+<a href="https://github.com/blsssss/PPshkin"><b>PPshkin</b></a> <sub><code>hackathon finalist</code></sub><br>
+Finalist at the <a href="https://hackathon-max.vk.company/">MAX Hackathon 2026</a>:
+one of 40 finalist teams selected from 442 submitted prototypes. Finals at Kazan Digital Week
+in Kazan; no prize placement.<br>
 Bot and mini app in the MAX messenger for small cafes and bakeries: food diary from photos,
 a dish nearby that fits the calories left for the day, end-of-day items at a discount instead of
 write-offs, bookings by code and QR.<br>
